@@ -1,10 +1,12 @@
-package com.example.achadosperdidos;
+package com.example.achadosperdidos.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Cadastro extends AppCompatActivity {
+import com.example.achadosperdidos.R;
+
+public class CadastroActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

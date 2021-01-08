@@ -1,12 +1,13 @@
-package com.example.achadosperdidos;
+package com.example.achadosperdidos.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.Color;
 
 import android.os.Bundle;
 import android.view.View;
+
+import com.example.achadosperdidos.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,6 +18,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void abrirCadastrar(View view) {
-        startActivity(new Intent(this, Cadastro.class));
+        startActivity(new Intent(this, CadastroActivity.class));
+    }
+
+    public void abrirRecuperarSenha(View view) {
+        startActivity(new Intent(this, RecuperarSenhaActivity.class));
+    }
+
+    public void logar(View view) {
+        startActivity(new Intent(this, HomeActivity.class));
     }
 }

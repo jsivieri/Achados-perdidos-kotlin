@@ -13,6 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AchadosPerdidos">
+        <activity android:name=".activities.HomeActivity"></activity>
+        <activity android:name=".activities.RecuperarSenhaActivity" />
 
         <uses-library
             android:name="com.google.android.wearable"
@@ -25,7 +27,7 @@
             android:name="com.google.android.wearable.standalone"
             android:value="true" />
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -33,12 +35,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Cadastro"
+            android:name=".activities.CadastroActivity"
             android:label="Cadastro">
-
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="MainActivity" />
+                android:value=".activities.MainActivity" />
         </activity>
     </application>
 
