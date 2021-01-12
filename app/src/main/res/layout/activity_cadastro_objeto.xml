@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:paddingTop="30dp"
-        android:text="Cadastro Objeto"
+        android:text="Cadastro de Objeto"
         android:textColor="#707070"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,6 +31,8 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="20dp">
 
+
+
         <EditText
             android:id="@+id/ob_nome"
             android:layout_width="300dp"
@@ -38,21 +40,7 @@
             android:layout_margin="5dp"
             android:background="@drawable/radius"
             android:ems="10"
-            android:hint="Objeto"
-            android:inputType="textPersonName"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:paddingRight="5dp"
-            android:paddingBottom="10dp" />
-
-        <EditText
-            android:id="@+id/ob_descricao"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:background="@drawable/radius"
-            android:ems="10"
-            android:hint="Descricao"
+            android:hint="Nome do Objeto"
             android:inputType="textPersonName"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
@@ -66,8 +54,8 @@
             android:layout_margin="5dp"
             android:background="@drawable/radius"
             android:ems="10"
-            android:hint="Data encontrada"
-            android:inputType="textPersonName"
+            android:hint="Data encontrado ou perdido"
+            android:inputType="date"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingRight="5dp"
@@ -80,8 +68,8 @@
             android:layout_margin="5dp"
             android:background="@drawable/radius"
             android:ems="10"
-            android:hint="Achado (1) ou Perdido (2)"
-            android:inputType="text"
+            android:hint="1 Encontrado / 2 Perdido"
+            android:inputType="number"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingRight="5dp"
@@ -101,15 +89,29 @@
             android:paddingRight="5dp"
             android:paddingBottom="10dp" />
 
+        <EditText
+            android:id="@+id/ob_descricao"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/radius"
+            android:ems="10"
+            android:hint="Descrição do objeto"
+            android:inputType="textPersonName"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="10dp" />
+
         <Button
-            android:id="@+id/bt_adicionar"
+            android:id="@+id/cadastrar_button"
             style="@style/MyButton"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:backgroundTint="@color/firstblue"
             android:padding="10dp"
-            android:text="Adicionar Objeto"
+            android:text="Cadastrar Objeto"
             android:textColor="@color/white" />
 
     </LinearLayout>

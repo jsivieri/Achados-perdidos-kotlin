@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:paddingTop="30dp"
-        android:text="Cadastro Objeto"
+        android:text="Dados do Usuario que Achou ou Perdeu Objeto"
         android:textColor="#707070"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,38 +21,26 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_width="358dp"
+        android:layout_height="442dp"
         android:layout_margin="20dp"
         android:background="@drawable/radius_container"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="20dp">
+        app:layout_constraintVertical_bias="0.498"
+        tools:layout_editor_absoluteX="26dp">
+
 
         <EditText
-            android:id="@+id/ob_nome"
+            android:id="@+id/us_nome"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:background="@drawable/radius"
             android:ems="10"
-            android:hint="Objeto"
-            android:inputType="textPersonName"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:paddingRight="5dp"
-            android:paddingBottom="10dp" />
-
-        <EditText
-            android:id="@+id/ob_descricao"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:background="@drawable/radius"
-            android:ems="10"
-            android:hint="Descricao"
+            android:hint="Nome"
             android:inputType="textPersonName"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
@@ -66,8 +54,8 @@
             android:layout_margin="5dp"
             android:background="@drawable/radius"
             android:ems="10"
-            android:hint="Data encontrada"
-            android:inputType="textPersonName"
+            android:hint="Data encontrado ou perdido"
+            android:inputType="date"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingRight="5dp"
@@ -80,8 +68,8 @@
             android:layout_margin="5dp"
             android:background="@drawable/radius"
             android:ems="10"
-            android:hint="Achado (1) ou Perdido (2)"
-            android:inputType="text"
+            android:hint="1 Encontrado / 2 Perdido"
+            android:inputType="number"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingRight="5dp"
@@ -101,17 +89,51 @@
             android:paddingRight="5dp"
             android:paddingBottom="10dp" />
 
-        <Button
-            android:id="@+id/bt_adicionar"
-            style="@style/MyButton"
+        <EditText
+            android:id="@+id/ob_nome"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:backgroundTint="@color/firstblue"
-            android:padding="10dp"
-            android:text="Adicionar Objeto"
-            android:textColor="@color/white" />
+            android:layout_margin="5dp"
+            android:background="@drawable/radius"
+            android:ems="10"
+            android:hint="Objeto"
+            android:inputType="textPersonName"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="10dp" />
+
+        <EditText
+            android:id="@+id/us_telefone"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/radius"
+            android:ems="10"
+            android:hint="Telefone / Whatsapp"
+            android:inputType="textPersonName"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="10dp" />
+
 
     </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:itemBackground="@color/secondblue"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:menu="@menu/navigation"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
